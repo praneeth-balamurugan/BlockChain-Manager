@@ -7,11 +7,12 @@ body {
     align-items: flex-start; /* Align items to the top */
     min-height: 100vh;
     overflow: auto; /* Enable scroll */
-    background: linear-gradient(135deg, #007BFF, #0056b3);
+    background: url('https://cdn.prod.website-files.com/62624e283b503f0ce727563e/6569e39a64bb462f9c6cddbd_Interoperability%20(1)-p-800.png') no-repeat center center fixed;
+    background-size: cover; /* Ensure the image covers the entire background */
 }
 
 .container {
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -25,7 +26,7 @@ body {
 #block-form {
     position: sticky;
     top: 0;
-    background: white;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     padding: 10px;
     border-bottom: 1px solid #ccc;
     z-index: 1000;
