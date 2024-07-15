@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #007BFF, #0056b3);
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
     min-height: 100vh;
+    overflow: auto; /* Enable scroll */
+    background: linear-gradient(135deg, #007BFF, #0056b3);
 }
 
 .container {
@@ -17,6 +18,17 @@ body {
     text-align: center;
     width: 80%;
     max-width: 800px; /* Ensure container doesn't exceed a certain width */
+    position: relative; /* To position elements inside the container */
+    margin: 20px 0;
+}
+
+#block-form {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
 }
 
 .hidden {
@@ -31,6 +43,7 @@ button {
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -57,6 +70,8 @@ input[type="text"] {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    overflow-y: auto; /* Enable vertical scroll */
+    max-height: 70vh; /* Adjust the height as needed */
 }
 
 .block {
@@ -69,6 +84,11 @@ input[type="text"] {
     max-width: 600px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative; /* Ensure position relative for pseudo-elements */
+    transition: transform 0.3s ease;
+}
+
+.block:hover {
+    transform: scale(1.05);
 }
 
 .block:before, .block:after {
@@ -95,4 +115,20 @@ input[type="text"] {
 .block p {
     margin: 5px 0;
     line-height: 1.5;
+}
+
+.feedback {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
