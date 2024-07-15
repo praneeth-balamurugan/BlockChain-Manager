@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     overflow: auto; /* Enable scroll */
     background: url('https://cdn.prod.website-files.com/62624e283b503f0ce727563e/6569e39a64bb462f9c6cddbd_Interoperability%20(1)-p-800.png') no-repeat center center fixed;
+    
     background-size: cover; /* Ensure the image covers the entire background */
 }
 
